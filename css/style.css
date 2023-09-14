@@ -162,6 +162,24 @@ a, a:hover {
   position: relative;
 }
 
+/* Add this CSS to your stylesheet */
+.logo-slider .logo-v1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Set the desired logo height */
+  max-width: 100%; /* Ensure the logo does not exceed its container */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+  .logo-slider .logo-v1 {
+    height: 60px; /* Adjust the height for mobile */
+  }
+}
+
+
 .unslate_co--site-nav .site-logo {
   z-index: 99;
 }
