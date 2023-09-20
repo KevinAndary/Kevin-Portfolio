@@ -8,6 +8,97 @@ body {
   position: relative;
 }
 
+.counter-v1 {
+  margin-bottom: 25px;
+}
+
+
+/* Base styles for .ftco-counter .block-18 */
+.ftco-counter .block-18 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #191919;
+  padding: 30px 20px;
+  border-radius: 5px;
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Media Queries for Container Width */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Styles for number input spin buttons */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* Styles for .ftco-about .counter-wrap .text */
+.ftco-about .counter-wrap .text p {
+  font-size: 20px;
+}
+
+.ftco-about .counter-wrap .text p span {
+  font-weight: 400;
+  color: #fff;
+}
+
+/* Styles for number with class .number */
+.ftco-about .counter-wrap .text p span.number {
+  font-weight: 600;
+  color: #D63447;
+}
+
+/* Styles for .ftco-counter .text strong.number */
+.ftco-counter .text strong.number {
+  font-weight: 700;
+  font-size: 30px;
+  color: #D63447;
+  display: block;
+}
+
+/* Styles for .ftco-counter .ftco-number */
+.ftco-counter .ftco-number {
+  display: block;
+  font-size: 72px;
+  font-weight: bold;
+  color: #D63447;
+}
+
+
+
+
+
 
 body:before {
   content: "";
@@ -1355,7 +1446,7 @@ figure.dotted-bg:before {
 .counter-v1 .counter-label {
   text-transform: uppercase;
   letter-spacing: .1rem;
-  font-size: 11px;
+  font-size: 18px;
   font-weight: 900;
 }
 
