@@ -57,10 +57,36 @@ body {
   }
 }
 
+
+
+/* Keyframes for the sliding animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the .counter-wrap elements */
+.ftco-counter .counter-wrap {
+  animation: slideIn 1s ease-in-out;
+}
+
 /* Styles for number input spin buttons */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
+}
+
+@media (max-width: 768px) {
+  /* Add some space between the counter blocks */
+  .ftco-counter .counter-wrap {
+    margin-bottom: 20px; /* You can adjust the margin as needed */
+  }
 }
 
 /* Styles for .ftco-about .counter-wrap .text */
@@ -94,6 +120,13 @@ body {
   font-weight: bold;
   color: #D63447;
 }
+
+.gsap-reveal-text {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
 
 
 
