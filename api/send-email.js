@@ -10,15 +10,15 @@ export default async function (req, res) {
     let transporter = nodemailer.createTransport({
       service: 'hotmail', // or your preferred email service (e.g., Gmail)
       auth: {
-        user: 'no-reply1234567@hotmail.com',
-        pass: 'your-email-password', // Use environment variables for security
+        user: 'no-reply12345678@hotmail.com',
+        pass: 'myRep1y$01', // Use environment variables for security
       },
     });
 
     // Define email options
     const mailOptions = {
       from: `Website Contact Form <${email}>`,
-      to: 'no-reply1234567@hotmail.com',
+      to: 'no-reply12345678@hotmail.com',
       subject: subject || 'Contact Form Submission',
       html: `
         <p><strong>Name:</strong> ${name}</p>
