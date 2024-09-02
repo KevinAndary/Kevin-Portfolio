@@ -1,25 +1,24 @@
 // api/send-email.js
-
 const nodemailer = require('nodemailer');
 
 export default async function (req, res) {
   if (req.method === 'POST') {
-    const { name, email, subject, message } = req.body;
+    const { name, email, message, subject = "Contact Form Submission" } = req.body;
 
     // Configure your email transporter
     let transporter = nodemailer.createTransport({
       service: 'hotmail', // or your preferred email service (e.g., Gmail)
       auth: {
-        user: 'no-reply12345678@hotmail.com',
-        pass: 'myRep1y$01', // Use environment variables for security
+        user: process.env.EMAIL_USER, // use environment variables for security
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     // Define email options
     const mailOptions = {
-      from: `Website Contact Form <${email}>`,
-      to: 'no-reply12345678@hotmail.com',
-      subject: subject || 'Contact Form Submission',
+      from: `Website Contact Form <${process.env.EMAIL_USER}>`, // Use your sender email here
+      to: email, // Send the email to the user's provided email address
+      subject: subject,
       html: `
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
@@ -33,6 +32,7 @@ export default async function (req, res) {
       await transporter.sendMail(mailOptions);
       res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
+      console.error("Error sending email:", error);
       res.status(500).json({ message: 'Failed to send email', error: error.message });
     }
   } else {
