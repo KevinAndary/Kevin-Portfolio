@@ -1492,8 +1492,9 @@ span.error {
     border: 1px solid red;
     background: #000; }
 
-.footer-site-social a {
-  pointer-events: auto;
-  z-index: 10;
+.footer-site-social {
+  background-color: rgba(255, 0, 0, 0.1); /* Light red for testing */
   position: relative;
+  z-index: 10;
 }
+
