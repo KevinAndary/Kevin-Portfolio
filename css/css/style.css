@@ -1491,3 +1491,9 @@ span.error {
     height: 100%;
     border: 1px solid red;
     background: #000; }
+
+.footer-site-social a {
+  pointer-events: auto;
+  z-index: 10;
+  position: relative;
+}
